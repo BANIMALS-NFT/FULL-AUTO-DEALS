@@ -4,54 +4,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FULL AUTO | DEALS</title>
+
 <style>
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #0e0e0e;
     color: white;
     text-align: center;
+    overflow-x: hidden;
+    position: relative;
 }
+
+/* Blurred Background */
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('your-logo.png') center center / cover no-repeat;
+    filter: blur(25px) brightness(0.35);
+    z-index: -2;
+}
+
+/* Dark overlay for contrast */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    z-index: -1;
+}
+
+/* Main container */
 .container {
-    padding: 40px 20px;
+    max-width: 500px;
+    margin: 80px auto;
+    padding: 40px 25px;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
 }
+
+/* Title */
 h1 {
-    font-size: 2.5em;
+    font-size: 2.4em;
+    margin-bottom: 10px;
     letter-spacing: 2px;
 }
+
+/* Subtitle */
 .subtext {
-    color: #bbbbbb;
-    margin-bottom: 30px;
+    color: #cccccc;
+    margin-bottom: 35px;
+    font-size: 0.95em;
 }
+
+/* Buttons */
 .button {
     display: block;
-    width: 80%;
-    max-width: 400px;
-    margin: 15px auto;
-    padding: 15px;
+    width: 100%;
+    margin: 15px 0;
+    padding: 16px;
     background: #00d084;
     color: black;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: 0.2s ease;
 }
+
 .button:hover {
     background: #00b874;
+    transform: scale(1.02);
 }
+
+/* Footer */
 .footer {
-    margin-top: 40px;
+    margin-top: 30px;
     font-size: 0.8em;
-    color: #777;
+    color: #aaaaaa;
 }
 </style>
 </head>
+
 <body>
+
+<div class="background"></div>
+<div class="overlay"></div>
+
 <div class="container">
     <h1>FULL AUTO | DEALS</h1>
-    <p class="subtext">Late Night Delivery. No Brake Pedal.</p>
+    <p class="subtext">
+        High Speed Delivery Deals. No Brake Pedal.
+    </p>
 
-    <a class="button" href="YOUR_UBER_EATS_REFERRAL_LINK_HERE" target="_blank">
+    <a class="button" href="https://www.ubereats.com/" target="_blank">
         Get Uber Eats First Order Discount
     </a>
 
@@ -67,5 +121,6 @@ h1 {
         Independent content platform. Affiliate links may earn commission.
     </div>
 </div>
+
 </body>
 </html>
